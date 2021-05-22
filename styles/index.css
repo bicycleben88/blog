@@ -15,6 +15,7 @@
   --background: var(--white);
   --textColor: var(--black);
   --headerBackground: var(--grey);
+  --cardBg: white;
 
   --headerFont: "BioRhyme", serif;
   --bodyFont: "Space Mono", monospace;
@@ -25,6 +26,14 @@
   --h3: 1.953rem;
   --h4: 1.563rem;
   --h5: 1.25rem;
+
+  --level-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --level-2: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --level-3: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --level-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
 
   --headerHeight: 4rem;
   --contentPadding: 2%;
@@ -66,7 +75,7 @@ header nav a {
   text-decoration: none;
 }
 
-header nav * + a {
+header nav a + a {
   padding-left: 10px;
 }
 
@@ -133,6 +142,31 @@ small,
 
 .cols-3 {
   --gridCols: 3;
+}
+
+.layout {
+  padding: calc(3rem + var(--headerHeight)) var(--contentPadding);
+}
+
+.card {
+  max-width: 40em;
+  box-shadow: var(--level-2);
+  padding: 2em;
+  background-color: var(--cardBg);
+}
+
+.card a {
+  color: var(--peach);
+  text-decoration: none;
+  border-bottom: 1px solid var(--peach);
+}
+
+.card > *:first-child {
+  margin-top: 0;
+}
+
+.card > *:last-child {
+  margin-bottom: 0;
 }
 
 @media only screen and (min-width: 550px) {

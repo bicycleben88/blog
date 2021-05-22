@@ -10,7 +10,7 @@ export default function Layout({ children }) {
           <a href="/">About</a>
         </nav>
       </header>
-      <main>{children}</main>
+      <main className="layout">{children}</main>
       <footer>my foot(er) goes down here!</footer>
     </>
   );

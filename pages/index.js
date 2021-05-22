@@ -1,12 +1,17 @@
 import { getAllPosts } from "../lib/api";
 import Head from "next/head";
 import Layout from "../components/Layout";
+import Card from "../components/Card";
 
 export default function Index({ allPosts }) {
-  console.log({ allPosts });
   return (
     <Layout>
-      <h1>Home Page</h1>
+      <Head>
+        <title>Botham City Blog</title>
+      </Head>
+      {allPosts.map((post) => (
+        <Card key={post.slug} post={post} />
+      ))}
     </Layout>
   );
 }
