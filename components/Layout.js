@@ -2,7 +2,7 @@ export default function Layout({ children }) {
   return (
     <>
       <header>
-        <img src="logo.png" alt="stencil of my headshot" />
+        <img src="/logo.png" alt="stencil of my headshot" />
         <h1>Botham City Blog</h1>
         <nav>
           <a href="/">Contact</a>

@@ -91,6 +91,22 @@ p {
   margin-bottom: 1rem;
 }
 
+blockquote {
+  background-color: var(--cardBg);
+  padding: 1em;
+  box-shadow: var(--level-3);
+}
+
+pre {
+  background-color: var(--grey);
+  color: var(--white);
+  padding: 0.5em;
+}
+
+hr {
+  border-bottom: 2px solid var(--peach);
+}
+
 h1,
 h2,
 h3,

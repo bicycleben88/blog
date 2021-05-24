@@ -4,8 +4,6 @@ excerpt: In this post I dive into how to look at two arrays and determine if the
 date: 05/22/2021
 ---
 
-# Frequency Counter Algorithm
-
 > Write a function called **same**, which accepts two arrays. The function should return true if every value in the array has its corresponding value squared in the second array. The frequency of values must be the same
 
 ---
