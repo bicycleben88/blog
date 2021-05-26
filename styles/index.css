@@ -10,7 +10,7 @@
   --orange: #ff8906;
   --peach: #f25f4c;
   --pink: #e53170;
-  --grey: #212027;
+  --grey: #28282c;
 
   --background: var(--white);
   --textColor: var(--black);
@@ -77,6 +77,19 @@ header nav a {
 
 header nav a + a {
   padding-left: 10px;
+}
+
+header .sub-header {
+  opacity: 0;
+  grid-column: 1 / -1;
+}
+
+header[display] {
+  --headerHeight: 5rem;
+}
+
+header[display] .sub-header {
+  opacity: 1;
 }
 
 body {

@@ -6,12 +6,12 @@ import markdownToHtml from "../../lib/markdownToHtml";
 import Layout from "../../components/Layout";
 import PostHeader from "../../components/PostHeader";
 
-export default function Post({ post, morePosts, preview }) {
-  console.log(post);
+export default function Post({ post }) {
   const router = useRouter();
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
   }
+
   return (
     <Layout>
       <Head>
