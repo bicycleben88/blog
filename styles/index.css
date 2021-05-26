@@ -45,7 +45,7 @@ html {
 
 header {
   display: grid;
-  grid-template-columns: 50px 250px 1fr;
+  grid-template: var(--headerHeight) / 50px 250px 1fr;
   background-color: var(--headerBackground);
   height: var(--headerHeight);
   width: 100%;
@@ -85,7 +85,7 @@ header .sub-header {
 }
 
 header[display] {
-  --headerHeight: 5rem;
+  grid-template: repeat(2, var(--headerHeight)) / 50px 250px 1fr;
 }
 
 header[display] .sub-header {
