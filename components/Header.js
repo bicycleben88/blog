@@ -19,14 +19,16 @@ export default function Header() {
       <img src="/logo.png" alt="stencil of my headshot" />
       <h1>Botham City Blog</h1>
       <nav>
-        <small onClick={displaySubheader}>Contact</small>
+        <span onClick={displaySubheader}>Contact</span>
         <a href="/">Home</a>
         <a href="/">About</a>
       </nav>
       <div className="sub-header flex">
-        <a href="/">Contact</a>
-        <a href="/">Home</a>
-        <a href="/">About</a>
+        <a href="https://higginbotham.fun">Portfolio</a>
+        <a href="https://www.linkedin.com/in/benjamin-alt-higginbotham/">
+          Linked<span style={{ color: "blue" }}>in</span>
+        </a>
+        <a href="mailto:bicycleben88@gmail.com">bicycleben88@gmail.com</a>
       </div>
     </header>
   );

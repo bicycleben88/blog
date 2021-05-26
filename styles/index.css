@@ -70,18 +70,33 @@ header nav {
   justify-self: flex-end;
 }
 
-header nav a {
+header nav a,
+header nav span {
   color: var(--peach);
   text-decoration: none;
 }
 
-header nav a + a {
+header nav * + a {
   padding-left: 10px;
 }
 
 header .sub-header {
+  background-color: var(--black);
+  position: fixed;
+  top: var(--headerHeight);
+  padding: 0 var(--contentPadding);
+  left: 0;
   opacity: 0;
-  grid-column: 1 / -1;
+  width: 100%;
+}
+
+header .sub-header a + a {
+  margin-left: 15px;
+}
+
+header .sub-header a {
+  color: var(--white);
+  text-decoration: none;
 }
 
 header[display] {
@@ -210,5 +225,9 @@ small,
 
   .grid {
     display: grid;
+  }
+
+  .sub-header a {
+    margin: 0;
   }
 }
