@@ -225,6 +225,7 @@ small,
   box-shadow: var(--level-2);
   padding: 2em;
   background-color: var(--cardBg);
+  margin: 10px auto;
 }
 
 .card a {
