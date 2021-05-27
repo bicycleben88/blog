@@ -20,6 +20,8 @@
   --headerFont: "BioRhyme", serif;
   --bodyFont: "Space Mono", monospace;
   --baseFontSize: 100%;
+  --footerBackground: var(--black);
+  --footerTextcolor: var(--white);
 
   --h1: 3.052rem;
   --h2: 2.441rem;
@@ -37,6 +39,7 @@
 
   --headerHeight: 4rem;
   --contentPadding: 2%;
+  --linkPadding: 10px;
 }
 
 html {
@@ -76,8 +79,12 @@ header nav span {
   text-decoration: none;
 }
 
+header nav span:hover {
+  cursor: pointer;
+}
+
 header nav * + a {
-  padding-left: 10px;
+  padding-left: var(--linkPadding);
 }
 
 header .sub-header {
@@ -91,7 +98,7 @@ header .sub-header {
 }
 
 header .sub-header a + a {
-  margin-left: 15px;
+  margin-left: var(--linkPadding);
 }
 
 header .sub-header a {
@@ -113,6 +120,27 @@ body {
   font-weight: 400;
   line-height: 1.75;
   color: var(--textColor);
+  margin: 0;
+}
+
+footer {
+  text-align: center;
+  background-color: var(--footerBackground);
+  color: var(--white);
+  padding-top: var(--contentPadding) 0;
+}
+
+footer nav a + a {
+  padding-left: var(--linkPadding);
+}
+
+footer a {
+  color: var(--footerTextColor);
+  text-decoration: none;
+}
+
+footer p {
+  margin-bottom: 0%;
 }
 
 p {

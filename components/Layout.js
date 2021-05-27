@@ -5,7 +5,14 @@ export default function Layout({ children }) {
     <>
       <Header />
       <main className="layout">{children}</main>
-      <footer>my foot(er) goes down here!</footer>
+      <footer>
+        <nav>
+          <a href="/">Home</a>
+          <a href="#">Top of Page</a>
+          <a href="/about">About</a>
+        </nav>
+        <p>&copy;Botham.City Blog</p>
+      </footer>
     </>
   );
 }

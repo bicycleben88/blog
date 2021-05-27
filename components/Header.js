@@ -21,7 +21,7 @@ export default function Header() {
       <nav>
         <span onClick={displaySubheader}>Contact</span>
         <a href="/">Home</a>
-        <a href="/">About</a>
+        <a href="/about">About</a>
       </nav>
       <div className="sub-header flex">
         <a href="https://higginbotham.fun">Portfolio</a>
