@@ -1,12 +1,22 @@
 {
   "name": "blog-starter",
+  "jest": {
+    "verbose": true,
+    "transform": {
+      "\\.js$": "<rootDir>/node_modules/babel-jest"
+    }
+  },
   "version": "1.0.0",
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "test": "jest"
   },
   "dependencies": {
+    "@babel/core": "^7.14.3",
+    "@babel/preset-env": "^7.14.4",
+    "babel-jest": "^27.0.2",
     "classnames": "2.2.6",
     "date-fns": "2.16.1",
     "gray-matter": "4.0.2",
@@ -16,6 +26,8 @@
     "remark": "13.0.0",
     "remark-html": "13.0.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "jest": "^27.0.1"
+  },
   "license": "MIT"
 }
