@@ -1,3 +1,5 @@
+/*** @jest-environment jsdom*/
+
 import React from "react";
 import { render, unmountComponentAtNode } from "react-dom";
 import { act } from "react-dom/test-utils";
@@ -22,6 +24,7 @@ it("renders post metadata onto card", async () => {
     excerpt: "This is an excerpt for this post",
     date: "06/06/06",
   };
+  global.fetch = jest.fn().mockImplementation(() => mockFetchPromise); // fetch work around
   jest.spyOn(global, "fetch").mockImplementation(() =>
     Promise.resolve({
       json: () => Promise.resolve(fakePost),
@@ -32,9 +35,11 @@ it("renders post metadata onto card", async () => {
     render(<Card post={fakePost} />, container);
   });
 
-  expect(container.querySelector("title")).toBe(fakePost.title);
-  expect(container.querySelector("excerpt")).toBe(fakePost.excerpt);
-  expect(container.querySelector("date")).toBe(fakePost.date);
+  expect(container.querySelector("h2").textContent).toBe(fakePost.title);
+  expect(container.querySelector("p").textContent).toBe(fakePost.excerpt);
+  expect(container.querySelector("small").textContent).toBe(fakePost.date);
 
   global.fetch.mockRestore();
+  global.fetch.mockClear(); // fetch work around
+  delete global.fetch; // fetch work around
 });

@@ -1,3 +1,5 @@
+import React from "react";
+
 export default function Card({ post }) {
   const { slug, title, excerpt, date } = post;
   return (
