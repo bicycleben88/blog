@@ -1,11 +1,5 @@
 {
   "name": "blog-starter",
-  "jest": {
-    "verbose": true,
-    "transform": {
-      "\\.js$": "<rootDir>/node_modules/babel-jest"
-    }
-  },
   "version": "1.0.0",
   "scripts": {
     "dev": "next",
